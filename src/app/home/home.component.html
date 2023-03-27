@@ -1,0 +1,53 @@
+<main class="main">
+
+    <div class="section-one">
+      <div class="section-two">
+        <h1>Die Fahrten deiner Wahl für wenig Geld</h1>
+        
+        <div class="form">
+          <form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+            <div class="from">
+              <select name="seher[]" id="seher" class="bselect" formControlName="cityFrom" [(ngModel)]="cityFrom">
+                <option selected="selected" value="0"class="selected">{{cityFrom}}</option>
+                <option *ngFor="let city of cities" class="link">{{city}}</option> 
+              </select>
+              <div class="vl"></div>
+            </div>
+            
+            <div class="to">
+              <select name="seher[]" id="seher" class="bselect" formControlName="cityTo" [(ngModel)]="cityTo">
+                <option selected="selected" value="0"class="selected">{{cityTo}}</option>
+                <option *ngFor="let city of cities" class="link">{{city}}</option> 
+              </select>
+              <div class="vl"></div>
+            </div>
+  
+            <div class="date-number">
+              <div class="date">
+                
+                <label (click)="showDropCalendar()">{{ selected | date:'d MMMM':"":"az-Latn" }}</label>
+                <input formControlName="selected" [(ngModel)]="selected" (click)="showDropCalendar()" [attr.disabled]="true">
+                <div class="vl"></div>
+                <div *ngIf="isDropDownShowing" id="myDropdown" class="dropdown-content">
+                  <mat-calendar [(selected)]="selected" (selectedChange)="showDropCalendar()"></mat-calendar>
+                </div>
+
+              </div>
+              <div class="number">
+                <mat-icon (click)="handleClick('subtract')">remove_circle_outline</mat-icon>
+                <input formControlName="numberOfPass" [(ngModel)]="numbOfPassengers">
+                <mat-icon (click)="handleClick('add')">add_circle_outline</mat-icon>
+              </div>
+            </div>
+  
+            <div class="submit">
+              <input type="submit" class="search rdys2" value="Search">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <h1 *ngIf="user$ | async as user">Welcome to our app, {{user.displayName}}!</h1>
+</main>

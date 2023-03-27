@@ -1,0 +1,86 @@
+    <div class="publish-ride-form mat-elevation-z5">
+        <form class="publishRideForm" [formGroup]="publishRideForm" (ngSubmit)="submit()">
+            <label class="towhere">Haradan haraya gedirsiz?</label>
+            <div class="route">
+                
+                <div class="from">
+                    <select name="seher[]" id="seher" class="bselect" formControlName="cityFrom" [(ngModel)]="cityFrom">
+                        <option selected="selected" value="0" class="selected">{{cityFrom}}</option>
+                      <option *ngFor="let city of cities" class="link">{{city}}</option> 
+                    </select>
+                  </div>
+                  <mat-icon>arrow_forward</mat-icon>
+                  <div class="to">
+                    <select name="seher[]" id="seher" class="bselect" formControlName="cityTo" [(ngModel)]="cityTo">
+                      <option selected="selected" value="0" class="selected">{{cityTo}}</option>
+                      <option *ngFor="let city of cities" class="link">{{city}}</option> 
+                    </select>
+                  </div>
+            </div>
+  
+            <mat-card class="date-number-seats">
+              <div class="number-seats">
+               
+                <label>Sərnişin sayı:</label>
+                <div class="number-seats-icons">
+                    <mat-icon (click)="handleClick('subtract')">remove_circle_outline</mat-icon>
+                    <input formControlName="numbOfSeat" [(ngModel)]="numbOfSeats" [attr.disabled]="true">
+                    <mat-icon (click)="handleClick('add')">add_circle_outline</mat-icon>
+                </div>  
+                           
+              </div>
+
+              <div class="date">
+                <mat-card class="demo-inline-calendar-card">
+                    
+                    <div class="date-time-picker">
+                        <div class="date-input">
+                            <label>Tarix: {{ selected | date:'d MMMM, EEEE':"":"az-Latn" }}</label>
+                            <input placeholder="Bugün" formControlName="selected" [(ngModel)]="selected" [attr.disabled]="true">
+                        </div>
+                        <div class="time">
+                            <label>Texmini saat secin:</label>
+                            <select name="seher[]" id="seher" class="bselect" formControlName="time" [(ngModel)]="time">
+                              <option selected="selected" value="0" class="selected">{{time}}</option>
+                              <option *ngFor="let city of cities" class="link">{{city}}</option> 
+                            </select>
+                          </div>  
+                    </div>              
+                    <mat-calendar [(selected)]="selected"></mat-calendar>    
+                          
+                </mat-card>
+
+              </div>
+
+              <div class="price-car">
+    
+                  <div class="price">
+                    Gediş haqqı:
+                    <div>
+                        <select name="seher[]" id="seher" class="bselect" formControlName="price" [(ngModel)]="time">
+                            <option selected="selected" value="0" class="selected">1.00 AZN</option>
+                            <option *ngFor="let city of cities" class="link">{{city}} AZN</option> 
+                          </select>
+                    </div>
+                   
+                  </div>
+
+                  <div class="car">
+                    <div>
+                        <mat-icon> directions_car</mat-icon>
+                        Avtomobilin marka ve modeli:
+                    </div>
+                    <input formControlName="car" placeholder="məsələn: Mersedec C-class 2008">                
+                  </div>
+              </div>
+
+              <div class="submit">
+                <button type="submit" mat-raised-button color="primary">Dərc et</button>
+              </div>
+            </mat-card>
+  
+            
+          </form>
+    </div>
+
+

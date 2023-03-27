@@ -1,0 +1,48 @@
+<div class="width100">
+  <div class="nav">
+    <div class="nav-content">
+        <div class="logo" routerLink="/">
+            BlablaCar
+        </div>
+        <div class="user-login">
+            <div class="user-login-2">
+              <div class="element" routerLink="/search">
+                <mat-icon>search</mat-icon>
+                <div class="label">Axtar</div> 
+              </div>
+            <div class="publish-ride element" routerLink="publish-ride"  (click)="setUrl()">
+              <mat-icon>add_box</mat-icon>
+              <div class="label">Publish a ride</div> 
+            </div>
+            </div>
+            <div class="profile-photo">
+                <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
+                  <button mat-button [matMenuTriggerFor]="userMenu">
+                    <mat-icon>account_circle</mat-icon>
+                    {{user.displayName}}
+                    <mat-icon>expand_more</mat-icon>
+                  </button>
+                </ng-container>
+  
+                <ng-template #loginButton>
+                  <button mat-button routerLink="login">
+                    <mat-icon>login</mat-icon>
+                    Login
+                  </button>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <div class="top-60">
+    <router-outlet></router-outlet>
+  </div>
+  
+  
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="logout()">Logout</button>
+    <button mat-menu-item (click)="logout()">Logout</button>
+    <button mat-menu-item (click)="logout()">Logoutlogoutttttuzuu</button>
+  </mat-menu>
+</div>

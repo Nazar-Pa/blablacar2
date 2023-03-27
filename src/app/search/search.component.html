@@ -1,0 +1,260 @@
+
+<ul>
+    <li *ngFor="let route of routesList">{{route.from_city}}</li>
+</ul>
+
+<div class="section-one search-component">
+    <div class="section-two search-component">
+        <div class="form">
+          <form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+            <div class="from">
+              <select name="seher[]" id="seher" class="bselect" formControlName="cityFrom" [(ngModel)]="cityFrom">
+                <option selected="selected" value="0"class="selected">{{cityFrom}}</option>
+                <option *ngFor="let city of cities" class="link">{{city}}</option> 
+              </select>
+              <div class="vl"></div>
+            </div>
+            
+            <div class="to">
+              <select name="seher[]" id="seher" class="bselect" formControlName="cityTo" [(ngModel)]="cityTo">
+                <option selected="selected" value="0"class="selected">{{cityTo}}</option>
+                <option *ngFor="let city of cities" class="link">{{city}}</option> 
+              </select>
+              <div class="vl"></div>
+            </div>
+  
+            <div class="date-number">
+              <div class="date">
+                
+                <label (click)="showDropCalendar()">{{ selected | date:'d MMMM':"":"az-Latn" }}</label>
+                <input formControlName="selected" [(ngModel)]="selected" (click)="showDropCalendar()" [attr.disabled]="true">
+                <div class="vl"></div>
+                <div *ngIf="isDropDownShowing" id="myDropdown" class="dropdown-content">
+                  <mat-calendar [(selected)]="selected" (selectedChange)="showDropCalendar()"></mat-calendar>
+                </div>
+
+              </div>
+              <div class="number">
+                <mat-icon (click)="handleClick('subtract')">remove_circle_outline</mat-icon>
+                <input formControlName="numberOfPass" [(ngModel)]="numbOfPassengers">
+                <mat-icon (click)="handleClick('add')">add_circle_outline</mat-icon>
+              </div>
+            </div>
+  
+            <div class="submit">
+              <input type="submit" class="search rdys2" value="Search">
+            </div>
+          </form>
+        </div>
+    </div>
+</div>
+
+<div class="cVsqFq">
+    <div class="evtNfY">
+        <div class="RbPDy">
+            <div role="presentation">
+                <div id="content-tab_all" role="tabpanel" aria-labelledby="content-tab_all">
+                    <div class="eAbqzF">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<ul class="search-result">
+    <div class="search-result-list">
+        <mat-card class="search-result-card">
+            <div class="clickable-card">
+                <div class="card-content">
+                    <div class="card-content-up">
+                        <div class="card-content-upleft">
+                            <ul class="hWztFd">
+                                <li class="fJACZc">
+                                    <div>
+                                       <div class="departure-time">
+                                        <p>10:00</p>
+                                       </div> 
+                                       <div class="direction-line">
+                                        <div class="sc-irLwvL eoVCJC"></div>
+                                        <div class="sc-csKIKE boLthe">
+                                            <div class="cmKBJw" aria-hidden="true"></div>
+                                        </div>
+                                        <div class="jSFBDi"></div>
+                                       </div>
+                                       <div class="departure-city">
+                                        <p>Baki</p>
+                                       </div>
+                                    </div>
+                                </li>
+                                <li class="fJACZc">
+                                    <div>
+                                        <div class="departure-time">
+                                            <p>10:00</p>
+                                           </div> 
+                                           <div class="direction-line">
+                                            <div class="jSFBDi"></div>
+                                            <div class="sc-csKIKE boLthe">
+                                                <div class="cmKBJw" aria-hidden="true"></div>
+                                            </div>
+                                            <div class="sc-irLwvL eoVCJC"></div>
+                                           </div>
+                                           <div class="departure-city">
+                                            <p>Baki</p>
+                                           </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-content-upright">
+                            <p>15 AZN</p>
+                        </div>
+                    </div>
+                    <div class="card-content-down">
+                      <span class="kirk-item-leftWrapper">
+                        <span class="kirk-item-leftAddon">
+                          <div class="sc-eMklSR ggbPcE kirk-avatar--image kirk-avatar--with-border kirk-avatar">
+                            <img src="assets/bmw.jpg" alt="BlaBlaCar Bus" data-testid="single-logo">
+                          </div>
+                        </span>
+                        <span class="kirk-item-leftText">
+                          <span class="kirk-text kirk-text-title sc-jPQLIr hsgurq">BlaBlaCar Bus</span>
+                      </span>
+                      </span>
+                      <span class="kirk-item-right"></span>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+        <mat-card class="search-result-card">
+          <div class="clickable-card">
+              <div class="card-content">
+                  <div class="card-content-up">
+                      <div class="card-content-upleft">
+                          <ul class="hWztFd">
+                              <li class="fJACZc">
+                                  <div>
+                                     <div class="departure-time">
+                                      <p>10:00</p>
+                                     </div> 
+                                     <div class="direction-line">
+                                      <div class="sc-irLwvL eoVCJC"></div>
+                                      <div class="sc-csKIKE boLthe">
+                                          <div class="cmKBJw" aria-hidden="true"></div>
+                                      </div>
+                                      <div class="jSFBDi"></div>
+                                     </div>
+                                     <div class="departure-city">
+                                      <p>Baki</p>
+                                     </div>
+                                  </div>
+                              </li>
+                              <li class="fJACZc">
+                                  <div>
+                                      <div class="departure-time">
+                                          <p>10:00</p>
+                                         </div> 
+                                         <div class="direction-line">
+                                          <div class="jSFBDi"></div>
+                                          <div class="sc-csKIKE boLthe">
+                                              <div class="cmKBJw" aria-hidden="true"></div>
+                                          </div>
+                                          <div class="sc-irLwvL eoVCJC"></div>
+                                         </div>
+                                         <div class="departure-city">
+                                          <p>Baki</p>
+                                         </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="card-content-upright">
+                          <p>15 AZN</p>
+                      </div>
+                  </div>
+                  <div class="card-content-down">
+                    <span class="kirk-item-leftWrapper">
+                      <span class="kirk-item-leftAddon">
+                        <div class="sc-eMklSR ggbPcE kirk-avatar--image kirk-avatar--with-border kirk-avatar">
+                          <img src="assets/bmw.jpg" alt="BlaBlaCar Bus" data-testid="single-logo">
+                        </div>
+                      </span>
+                      <span class="kirk-item-leftText">
+                        <span class="kirk-text kirk-text-title sc-jPQLIr hsgurq">BlaBlaCar Bus</span>
+                    </span>
+                    </span>
+                    <span class="kirk-item-right"></span>
+                  </div>
+              </div>
+          </div>
+      </mat-card>
+      <mat-card class="search-result-card">
+        <div class="clickable-card">
+            <div class="card-content">
+                <div class="card-content-up">
+                    <div class="card-content-upleft">
+                        <ul class="hWztFd">
+                            <li class="fJACZc">
+                                <div>
+                                   <div class="departure-time">
+                                    <p>10:00</p>
+                                   </div> 
+                                   <div class="direction-line">
+                                    <div class="sc-irLwvL eoVCJC"></div>
+                                    <div class="sc-csKIKE boLthe">
+                                        <div class="cmKBJw" aria-hidden="true"></div>
+                                    </div>
+                                    <div class="jSFBDi"></div>
+                                   </div>
+                                   <div class="departure-city">
+                                    <p>Baki</p>
+                                   </div>
+                                </div>
+                            </li>
+                            <li class="fJACZc">
+                                <div>
+                                    <div class="departure-time">
+                                        <p>10:00</p>
+                                       </div> 
+                                       <div class="direction-line">
+                                        <div class="jSFBDi"></div>
+                                        <div class="sc-csKIKE boLthe">
+                                            <div class="cmKBJw" aria-hidden="true"></div>
+                                        </div>
+                                        <div class="sc-irLwvL eoVCJC"></div>
+                                       </div>
+                                       <div class="departure-city">
+                                        <p>Baki</p>
+                                       </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-content-upright">
+                        <p>15 AZN</p>
+                    </div>
+                </div>
+                <div class="card-content-down">
+                  <span class="kirk-item-leftWrapper">
+                    <span class="kirk-item-leftAddon">
+                      <div class="sc-eMklSR ggbPcE kirk-avatar--image kirk-avatar--with-border kirk-avatar">
+                        <img src="assets/bmw.jpg" alt="BlaBlaCar Bus" data-testid="single-logo">
+                      </div>
+                    </span>
+                    <span class="kirk-item-leftText">
+                      <span class="kirk-text kirk-text-title sc-jPQLIr hsgurq">BlaBlaCar Bus</span>
+                  </span>
+                  </span>
+                  <span class="kirk-item-right"></span>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+      </div>
+</ul>

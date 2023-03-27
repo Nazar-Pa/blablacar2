@@ -1,0 +1,821 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shantell+Sans:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.width100{
+    width: 100%;
+}
+
+/* router outlet */
+
+.top-60{
+    position: relative;
+    top: 60px;
+}
+
+.layout{
+    max-width: 960px;
+    margin: auto;
+}
+
+mat-icon{
+    cursor: pointer;
+}
+
+select{
+    cursor: pointer;
+}
+
+body{
+    background-color: rgb(253, 253, 250);
+}
+
+.dropdown-content {
+    position: absolute;
+    display: block;
+  background-color: rgb(240, 247, 250);
+  width: 260px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 100000;
+  color: #000000;
+  top: 64px;
+  border-radius: 10px;
+  animation: 0.5s 1 fadeIn;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  .dropdown-content mat-calendar{
+    color: rgb(0, 162, 255);
+  }
+
+
+/* navbar */
+
+
+.nav{
+    position: fixed;
+    height: 60px;
+    background: #ffffff;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    top: 0;
+    z-index: 200;
+    width: 100%;
+}
+.nav-content{
+    position: relative;
+    max-width: 1030px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.logo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Shantell Sans', cursive;
+    font-size: 34px;
+    height: 100%;
+    cursor: pointer;
+    padding-left: 16px;
+  
+}
+
+.user-login{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.user-login .user-login-2{
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+}
+
+.user-login-2 .element{
+    cursor: pointer;
+}
+
+a{
+    color: rgb(89, 89, 89);
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+a:hover{
+    color: rgb(247, 129, 118);
+}
+
+.element{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+/* login */
+
+
+.form-container{
+    position: relative;
+    display: block;
+    max-width: 400px;
+    margin: auto;
+    background: #eceff1;
+    padding: 48px;
+    border-radius: 16px;
+}
+
+.form-container mat-form-field{
+    width: 100%;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.margin-top{
+    margin-top: 16px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.sign-up-link{
+    font-size: 1.2rem;
+    margin-left: 8px;
+}
+
+
+
+
+/* BANNER */
+
+.main{
+    width: 100%;
+}
+
+.section-one{
+    background-color: rgb(45, 128, 252);
+    width: 100%;
+    color: white;
+    background-image: url("./assets/pattern3_1.png");
+    background-blend-mode: multiply;
+    height: 34vh;
+}
+
+.section-one.search-component{
+    background: none;
+    height: 140px;
+}
+
+.section-two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 980px;
+    justify-content: space-around;
+    padding-top: 40px;
+    height: 100%;
+}
+
+.section-two.search-component{
+    padding: 0;
+}
+.section-two h1{
+    font-size: 48px;
+}
+
+.form{
+    position: relative;
+    display: flex;
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 60px;
+}
+
+.search-form{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; 
+    border-radius: 12px;
+    outline: none;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+
+.form input, .form select{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.from, .to{
+    flex: 4;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.search-form select{
+    font-size: 18px;
+    height: 100%;
+}
+
+
+
+.date-number{
+    display: flex;
+    flex: 6;
+    /* height: 100%; */
+}
+
+.date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 4;
+}
+
+.date label{
+    color: #000000;
+    width: 100%;
+    cursor: pointer;
+}
+
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    color: black;
+}
+
+.number input{
+    margin: 0 5px;
+    text-align: center;
+    padding: 0;
+    width: 30px;
+    font-size: 22px;
+}
+
+.number mat-icon{
+    color: rgb(148, 185, 214);
+}
+
+.number mat-icon:hover{
+    color: rgb(42, 157, 246);
+}
+
+.submit{
+    position: relative;
+    flex: 3;
+}
+
+.submit input{
+    height: 100%;
+    border: none;
+}
+
+
+.-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+.search{
+    background-color: rgb(38, 148, 238);
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.search:hover{
+    background-color: rgb(57, 106, 146);
+}
+
+
+input{
+    font-size: 16px;
+}
+
+
+
+.vl{
+    position: relative;
+    height: 90%;
+    border-left: 1px solid rgb(233, 233, 233);
+    align-items: center;
+    justify-content: center;
+    margin: auto 0 auto 14px;
+}
+
+
+.swap-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+
+
+/* publish ride */
+
+
+.publish-ride-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px 0;
+    max-width: 960px;
+}
+
+.publishRideForm{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.publishRideForm select {
+    border: 3px solid #878897;
+    outline: none;
+    border-radius: 20px;
+}
+
+.route{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.publishRideForm .towhere{
+    font-size: 22px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 14px;
+}
+
+.route select{
+    position: relative;
+    width: 230px;
+    border-radius: 15px;
+    font-size: 26px;
+    padding: 6px;
+    background-color: #ECF2FF;
+    cursor: pointer;
+}
+
+.route select option{
+    font-size: 14px;
+}
+
+
+
+.demo-inline-calendar-card {
+    margin-bottom: 26px;
+    max-width: 750px;
+}
+
+
+mat-card{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.date-number-seats{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #ECF2FF;
+}
+
+.date-number-seats .date{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.number-seats{
+    text-align: center;
+    height: fit-content;
+    background-color: #ECF2FF;
+    padding: 10px 0;
+}
+
+.number-seats label{
+    font-size: 24px;
+    color: #000000;
+    font-weight: 500;
+    text-decoration: wavy;
+}
+
+.number-seats-icons input{
+    display: flex;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 20px;
+    margin: 20px;
+    font-size: 36px;
+    background-color: #ECF2FF;
+}
+
+.date-input input, .date input{
+
+    display: none;
+}
+
+
+.date label{
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: 400;
+}
+
+.number-seats-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: 0 10px;
+}
+
+.number-seats-icons mat-icon{
+    position: relative;
+    font-size: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #878897;
+}
+
+
+.number-seats-icons mat-icon:hover{
+    color: rgb(93, 101, 190);
+}
+
+.publishRideForm .price-car{
+    display: flex;
+    justify-content: space-between;
+}
+
+.time label, .price label{
+    margin-right: 10px;
+}
+
+.publishRideForm label, .price-car .price, .price-car .car{
+    color: rgb(56, 36, 235);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.time select, .price select, .publishRideForm .car input {
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.price .bselect{
+    margin-left: 8px;
+}
+
+.publishRideForm .car{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.publishRideForm .car input{
+    border: none;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 0;
+    outline: none;
+    font-size: 18px;
+}
+
+.publishRideForm .car div{
+    display: flex;
+    align-items: center;
+}
+
+.date-time-picker{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.publishRideForm .price{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.publishRideForm .submit{
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+.publishRideForm .submit button{
+    font-size: 18px;
+    padding: 0 16px;
+}
+
+
+.price select{
+    width: 150px;
+}
+
+
+
+
+
+@media (max-width: 800px) {
+
+    .top-60{
+        top: 50px;
+    }
+
+    /* navbar */
+
+    .nav{
+        height: 50px;
+    }
+
+    .nav-content{
+        padding: 0 10px;
+    }
+
+    .user-login .label{
+        display: none;
+    }
+
+    .user-login .user-login-2{
+        width: 60px;
+    }
+
+    .logo{
+        font-size: 20px
+    }
+
+
+
+    /* banner */
+
+    .section-one{
+        background-size: cover;
+    }
+
+    .form{
+        height: 170px;
+    }
+
+    .search-form{
+        display: flex;
+        flex-direction: column;
+        height: 170px;
+    }
+
+    .dropdown-content{
+        top: 130px;
+        left: 20px;
+    }
+
+
+    .from, .to{
+        border-bottom: 1px solid rgb(212, 212, 212);
+    }
+
+    .search{
+        height: 60px;
+        color: rgb(255, 255, 255);
+    }
+
+    .search:hover{
+        background-color: rgb(57, 106, 146);
+    }
+
+    .date-number{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .section-two h1{
+        margin-top: 30px;
+        margin-bottom: 50px;
+        font-size: 26px;
+    }
+
+    .date{
+        flex: 2;
+        display: flex;
+    }
+
+    .number{
+        flex: 1;
+    }
+
+    
+
+
+
+    /* publish ride */
+
+
+.publish-ride-form{
+    width: 100%;
+}
+
+.publishRideForm{
+    width: 100%;
+}
+
+.publishRideForm select {
+    border-radius: 16px;
+}
+
+.route{
+    margin-bottom: 10px;
+}
+
+
+.publishRideForm .towhere{
+    font-size: 16px;
+}
+
+.route select{
+    font-size: 16px;
+    width: 150px;
+}
+
+.route select option{
+    font-size: 12px;
+}
+
+
+.number-seats label{
+    font-size: 18px;
+}
+
+.number-seats-icons input{
+    font-size: 28px;
+}
+
+.date-input input{
+    font-size: 18px;
+}
+
+
+.date label{
+    font-size: 16px;
+}
+
+
+.publishRideForm .price-car{
+    display: flex;
+    justify-content: space-between;
+}
+
+.time label, .price label, .publishRideForm, .price-car .price, .price-car .car{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.time select, .price select, .publishRideForm .car input {
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 3px;
+}
+
+.publishRideForm .submit button{
+    font-size: 14px;
+    padding: 0 12px;
+}
+
+.time{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.publishRideForm label{
+    font-size: 16px;
+}
+
+.price-car, .price-car .car{
+    flex-direction: column;
+}
+
+.price-car .price, .price-car .car{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.price-car .price{
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.price-car .car div{
+    margin-bottom: 10px;
+}
+
+
+.price-car .car input{
+    width: 100%;
+    padding: 8px;
+}
+
+.date-time-picker{
+    flex-direction: column-reverse;
+}
+
+.price select{
+    width: 100px;
+}
+
+.date-input{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #e2ebfd;
+    border-radius: 50px;
+}
+
+
+
+}
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
